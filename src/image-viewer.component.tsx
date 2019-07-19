@@ -13,7 +13,8 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
-  ViewStyle
+  ViewStyle,
+  Easing
 } from 'react-native';
 import ImageZoom from 'react-native-image-pan-zoom';
 import styles from './image-viewer.style';
@@ -304,7 +305,7 @@ export default class ImageViewer extends React.Component<Props, State> {
     Animated.timing(this.positionX, {
       toValue: this.positionXNumber,
       duration: this.props.pageAnimateTime,
-      easing: this.props.easing
+      easing: Easing.out(Easing.cubic)
     }).start();
 
     const nextIndex = (this.state.currentShowIndex || 0) - 1;
@@ -338,7 +339,7 @@ export default class ImageViewer extends React.Component<Props, State> {
     Animated.timing(this.positionX, {
       toValue: this.positionXNumber,
       duration: this.props.pageAnimateTime,
-      easing: this.props.easing
+      easing: Easing.out(Easing.cubic)
     }).start();
 
     const nextIndex = (this.state.currentShowIndex || 0) + 1;
