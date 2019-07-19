@@ -105,7 +105,7 @@ export class Props {
     //
   };
   
-    public easing?: (easing?: () => any) => void = () => {
+    public easing: (easing: () => any) => (value: number) => number => {
    
   };
 
