@@ -104,6 +104,10 @@ export class Props {
   public onClick?: (close?: () => any, currentShowIndex?: number) => void = () => {
     //
   };
+  
+    public easing?: (easing?: () => any) => void = () => {
+   
+  };
 
   /**
    * 双击回调
