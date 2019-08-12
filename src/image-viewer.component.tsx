@@ -74,7 +74,7 @@ export default class ImageViewer extends React.Component<Props, State> {
       );
     }
     if(nextProps.backgroundColor !== this.styles.backgroundColor) {
-    this.styles = styles(this.width, this.height, nextProps.backgroundColor);
+    this.styles = styles(this.width, this.height, nextProps.backgroundColor || 'black');
 }
   }
 
