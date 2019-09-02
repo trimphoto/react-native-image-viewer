@@ -416,7 +416,7 @@ export default class ImageViewer extends React.Component<Props, State> {
    * 完成布局
    */
   public handleLayout = (event: any) => {
-    if (event.nativeEvent.layout.width !== this.width) {
+   if ((event.nativeEvent.layout.width !== _this.width) || (event.nativeEvent.layout.height !== _this.height)) {
       this.hasLayout = true;
 
       this.width = event.nativeEvent.layout.width;
