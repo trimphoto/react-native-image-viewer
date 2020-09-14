@@ -591,7 +591,7 @@ export default class ImageViewer extends React.Component<Props, State> {
 
     return (
       <Animated.View style={{ zIndex: 9 }}>
-        <Animated.View style={{ ...this.styles.container, opacity: this.fadeAnim }}>
+        <Animated.View style={{ ...this.styles.container, opacity: this.fadeAnim } as any}>
           {this!.props!.renderHeader!(this.state.currentShowIndex)}
 
           <View style={this.styles.arrowLeftContainer}>
@@ -611,7 +611,7 @@ export default class ImageViewer extends React.Component<Props, State> {
               ...this.styles.moveBox,
               transform: [{ translateX: this.positionX }],
               width: this.width * this.props.imageUrls.length
-            }}
+            } as any}
           >
             {ImageElements}
           </Animated.View>
